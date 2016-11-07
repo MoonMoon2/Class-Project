@@ -182,7 +182,7 @@ while loop == True:
                 print(ans + ' is not A or B')
                 continue
         while q3 == True:
-            
+
 
         break
     elif ans == 'no':
