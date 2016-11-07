@@ -140,7 +140,7 @@ while loop == True:
                 D = False
                 continue
             else:
-                print('\''ans + '\' is not an option.')
+                print('\'' + ans + '\' is not an option.')
         A = True
         B = True
         C = True
