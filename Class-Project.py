@@ -121,6 +121,7 @@ while loop == True:
                     print('Explanation')
                     time.sleep(0.5)
                     print('checkpoint')
+                    q1 = False
                     break
 
 
@@ -176,6 +177,7 @@ while loop == True:
                 if why == 'yes':
                     print('Next Question')
                     time.sleep(2)
+                    q2 = False
                     break
             elif ans == 'b':
                 print('Answer B is incorrect, ' + name + '.')
