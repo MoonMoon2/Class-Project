@@ -42,6 +42,7 @@ print('This is an interactive game/quiz that will both quiz you, and teach you a
 time.sleep(2)
 print('We will ask for your name and run some things with it to ensure the program you are running this in is configured correctly.')
 print('What is your name?')
+name = raw_input()
 time.sleep(0.5)
 loop = True
 ans = 'T'
@@ -53,15 +54,26 @@ A = True
 B = True
 C = True
 D = True
+Alpha = False
+Beta = False
+Charlie = False
+Delta = False
+
 while loop == True:
     if len(ans) <= 1:
     	print('Hello ' + name + '. Please verify that this if your name.')
     	print('Answer yes or no.')
+    	ans = raw_input('')
     	ans = ans.lower()
     else:
     	print('Your real name is ' + name + ', right?')
     	print('Answer yes or no.')
+    	ans = raw_input('')
     	ans = ans.lower()
+    A = True
+    B = True
+    C = True
+    D = True
     if ans == 'yes':
         while q1 == True:
             print('*********************************************************')
@@ -96,11 +108,14 @@ while loop == True:
                 print('Option D: Butter')
                 print('*********************************************************')
                 time.sleep(0.5)
+            ans = raw_input('')
             ans = ans.lower()
+            rans = str('b')
             if ans == rans:
                 print('Good Job, ' + name + '. You got it right. Do you understand why?')
                 q1 = False
                 print('Answer yes or no')
+                why = raw_input('')
                 why = why.lower()
                 if why == 'no':
                     print('Explanation')
@@ -114,6 +129,8 @@ while loop == True:
                 print('Correction text')
                 A = False
                 continue
+            elif ans == 'c':
+                print('Answer C is incorrect, ' + name + '.')
                 print('Correction text')
                 B = False
                 continue
@@ -142,16 +159,23 @@ while loop == True:
             if B == True:
                 print('Option B: False')
                 print('*********************************************************')
+            ans = raw_input()
             ans = ans.lower()
+            rans = str('a')
             if ans == rans:
                 print('Good Job, ' + name + '. You got it right. Do you understand why?')
                 q1 = False
                 print('Answer yes or no')
+                why = raw_input('')
                 why = why.lower()
                 if why == 'no':
                     print('Explanation')
                     time.sleep(0.5)
                     print('checkpoint')
+                    break
+                if why == 'yes':
+                    print('Next Question')
+                    time.sleep(2)
                     break
             elif ans == 'b':
                 print('Answer B is incorrect, ' + name + '.')
@@ -161,12 +185,48 @@ while loop == True:
             else:
                 print(ans + ' is not A or B')
                 continue
+        A = True
+        B = True
+        C = True
+        D = True
         while q3 == True:
+            print('*********************************************************')
+            print('                      Question: 2                        ')
+            print('*********************************************************')
+            print('        Why is a pineapple pen not an apple pen?         ')
+            print('*********************************************************')
+            print('    Answer with a short answer. Your response will be    ')
+            print('         checked with keywords.          ')
+            print('*********************************************************')
+            ans = raw_input('')
+            ans = ans.lower()
+            if contains(ans, 'i ') >= 1:
+                Alpha = True
+                print('A')
+            if contains(ans, 'am') >= 1:
+                Beta = True
+                print('B')
+            if contains(ans, 'a') >= 1:
+                Charlie = True
+                print('C')
+            if contains(ans, 'tate') >= 1:
+                Delta = True
+                print('D')
+            if Alpha == True and Beta == True and Charlie == True and Delta == True:
+                print('Success')
+
+
+
+            break
+
+
 
 
         break
+
     elif ans == 'no':
         print('What is your name actually?')
+        name = raw_input('')
 
         continue
 
