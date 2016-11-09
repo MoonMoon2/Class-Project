@@ -204,6 +204,73 @@ while loop == True:
             else:
                 print(ans + ' is not A or B')
                 continue
+        A = True
+        B = True
+        C = True
+        D = True
+        while q1 == True:
+            print('*********************************************************')
+            print('                      Question: 1                        ')
+            print('*********************************************************')
+            print('How are Secularism and Humanism reflected in the Gutenberg Bible?         ')
+            print('*********************************************************')
+            print('               Type \'A\', \'B\', \'C\', or \'D\'                ')
+            print('*********************************************************')
+            time.sleep(2)
+            if A == True:
+                print('Option A: The Gutenberg bible took power away from the Peasants by making the Church\'s power more widespread')
+                print('than before. They had bibles everywhere now, and their religion was spreading.')
+                print('*********************************************************')
+                time.sleep(0.5)
+            if B == True:
+                print('Option B: Cheese')
+                print('*********************************************************')
+                time.sleep(0.5)
+            if C == True:
+                print('Option C: The Gutenberg Bible took away some of the Catholic Church\'s power')
+                print('by taking away the power of the Priests to interpret the bible for the people.')
+                print('*********************************************************')
+                time.sleep(0.5)
+            if D == True:
+                print('Option D: ')
+                print('*********************************************************')
+                time.sleep(0.5)
+            ans = raw_input('')
+            ans = ans.lower()
+            rans = str('c')
+            if ans == rans:
+                print('Good Job, ' + name + '. You got it right. Do you understand why?')
+                q1 = False
+                print('Answer yes or no')
+                why = raw_input('')
+                why = why.lower()
+                if why == 'no':
+                    print('Explanation')
+                    time.sleep(0.5)
+                    print('checkpoint')
+                    q1 = False
+                    break
+
+
+
+
+            elif ans == 'a':
+                print('Answer A is incorrect, ' + name + '.')
+                print('Correction text')
+                A = False
+                continue
+            elif ans == 'b':
+                print('Answer B is incorrect, ' + name + '.')
+                print('Correction text')
+                B = False
+                continue
+            elif ans == 'd':
+                print('Answer D is incorrect, ' + name + '.')
+                print('correction text')
+                D = False
+                continue
+            else:
+                print('\'' + ans + '\' is not an option.')
 
 
         break
