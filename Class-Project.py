@@ -194,7 +194,6 @@ while loop == True:
                 if why == 'yes':
                     print('Next Question')
                     time.sleep(2)
-                    q2 = False
                     break
             elif ans == 'b':
                 print('Answer B is incorrect, ' + name + '.')
@@ -208,7 +207,7 @@ while loop == True:
         B = True
         C = True
         D = True
-        while q1 == True:
+        while q3 == True:
             print('*********************************************************')
             print('                      Question: 3                        ')
             print('*********************************************************')
@@ -248,7 +247,6 @@ while loop == True:
                     print('Explanation')
                     time.sleep(0.5)
                     print('checkpoint')
-                    q1 = False
                     break
             elif ans == 'a':
                 print('Answer A is incorrect, ' + name + '.')
@@ -271,7 +269,7 @@ while loop == True:
         B = True
         C = True
         D = True
-        while q2 == True:
+        while q4 == True:
             print('*********************************************************')
             print('                      Question: 4                        ')
             print('*********************************************************')
@@ -301,7 +299,6 @@ while loop == True:
                 if why == 'yes':
                     print('Next Question')
                     time.sleep(2)
-                    q2 = False
                     break
             elif ans == 'b':
                 print('Answer B is incorrect, ' + name + '.')
