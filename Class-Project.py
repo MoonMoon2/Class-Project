@@ -50,6 +50,12 @@ q1 = True
 q2 = True
 q3 = True
 q4 = True
+q5 = True
+q6 = True
+q7 = True
+q8 = True
+q9 = True
+q10 = True
 A = True
 B = True
 C = True
@@ -70,47 +76,51 @@ while loop == True:
     	print('Answer yes or no.')
     	ans = raw_input('')
     	ans = ans.lower()
-    A = True
-    B = True
-    C = True
-    D = True
     if ans == 'yes':
+        loop == False
+        A = True
+        B = True
+        C = True
+        D = True
         while q1 == True:
             print('*********************************************************')
             print('                         Part: 1                         ')
             print('*********************************************************')
             print('               Renaissance and Reformation               ')
             print('*********************************************************')
+            print('                     Gutenberg Bible                     ')
+            print('*********************************************************')
             time.sleep(2)
-            print()
-            print()
+            print('')
+            print('')
             print('*********************************************************')
             print('                      Question: 1                        ')
             print('*********************************************************')
-            print('        Why is a pineapple pen not an apple pen?         ')
+            print('                   What is Secularism?                   ')
             print('*********************************************************')
-            print('                  Choose A, B, C, or D                   ')
+            print('               Type \'A\', \'B\', \'C\', or \'D\'                ')
+            print('                    Then press Enter.                    ')
             print('*********************************************************')
-            time.sleep(2)
+            time.sleep(0.5)
             if A == True:
-                print('Option A: Because')
+                print('Option A: The belief that religion should not play a role in government, education, or other public parts of society.')
                 print('*********************************************************')
                 time.sleep(0.5)
             if B == True:
-                print('Option B: Cheese')
+                print('Option B: The belief that religion should play a role in government, education, and other parts of society.')
                 print('*********************************************************')
                 time.sleep(0.5)
             if C == True:
-                print('Option C: Cracker')
+                print('Option C: A movement to break away from the Catholic Church and create a new form of Catholicism.')
                 print('*********************************************************')
                 time.sleep(0.5)
             if D == True:
-                print('Option D: Butter')
+                print('Option D: A group of people who isolated themselves from the rest of society to study science.')
                 print('*********************************************************')
                 time.sleep(0.5)
             ans = raw_input('')
             ans = ans.lower()
-            rans = str('b')
+            rans = str('a')
             if ans == rans:
                 print('Good Job, ' + name + '. You got it right. Do you understand why?')
                 q1 = False
@@ -118,30 +128,35 @@ while loop == True:
                 why = raw_input('')
                 why = why.lower()
                 if why == 'no':
-                    print('Explanation')
-                    time.sleep(0.5)
-                    print('checkpoint')
+                    print('Secularism is a belief that religion should be separate of goverment, and other public life.')
+                    print('Secularism is the idea that religion is for private life.')
+                    time.sleep(2)
                     q1 = False
                     break
-
-
-            elif ans == 'a':
-                print('Answer A is incorrect, ' + name + '.')
-                print('Correction text')
-                A = False
+                elif why == 'yes':
+                    print('Next question')
+                    time.sleep(0.5)
+                    q1 = False
+                    break
+            elif ans == 'b':
+                print('Answer B is incorrect, ' + name + '.')
+                print('Secularism is just the opposite of this.')
+                time.sleep(5)
+                B = False
                 continue
             elif ans == 'c':
                 print('Answer C is incorrect, ' + name + '.')
-                print('Correction text')
-                B = False
+                print('This is Protestantism, not Secularism.')
+                C = False
                 continue
             elif ans == 'd':
                 print('Answer D is incorrect, ' + name + '.')
-                print('correction text')
+                print('This is Social Isolation, not Secularism.')
                 D = False
                 continue
             else:
                 print('\'' + ans + '\' is not an option.')
+                continue
         A = True
         B = True
         C = True
@@ -150,8 +165,11 @@ while loop == True:
             print('*********************************************************')
             print('                      Question: 2                        ')
             print('*********************************************************')
-            print('        Why is a pineapple pen not an apple pen?         ')
+            print(' Humanism is a system of values and beliefs that is based')
+            print('   on the idea that people are basically good and that   ')
+            print(' problems can be solved using reason instead of religion.')
             print('*********************************************************')
+            time.sleep(2)
             print('                     Choose A or B                       ')
             print('*********************************************************')
             if A == True:
@@ -170,9 +188,8 @@ while loop == True:
                 why = raw_input('')
                 why = why.lower()
                 if why == 'no':
-                    print('Explanation')
-                    time.sleep(0.5)
-                    print('checkpoint')
+                    print('Humanism was an appreciation of Humans and in the power of the human mind.')
+                    time.sleep(5)
                     break
                 if why == 'yes':
                     print('Next Question')
@@ -181,47 +198,12 @@ while loop == True:
                     break
             elif ans == 'b':
                 print('Answer B is incorrect, ' + name + '.')
-                print('Correction text')
+                print('Humanism was an appreciation of Humans and in the power of the human mind.')
                 B = False
                 continue
             else:
                 print(ans + ' is not A or B')
                 continue
-        A = True
-        B = True
-        C = True
-        D = True
-        while q3 == True:
-            print('*********************************************************')
-            print('                      Question: 2                        ')
-            print('*********************************************************')
-            print('        Why is a pineapple pen not an apple pen?         ')
-            print('*********************************************************')
-            print('    Answer with a short answer. Your response will be    ')
-            print('         checked with keywords.          ')
-            print('*********************************************************')
-            ans = raw_input('')
-            ans = ans.lower()
-            if contains(ans, 'i ') >= 1:
-                Alpha = True
-                print('A')
-            if contains(ans, 'am') >= 1:
-                Beta = True
-                print('B')
-            if contains(ans, 'a') >= 1:
-                Charlie = True
-                print('C')
-            if contains(ans, 'tate') >= 1:
-                Delta = True
-                print('D')
-            if Alpha == True and Beta == True and Charlie == True and Delta == True:
-                print('Success')
-
-
-
-            break
-
-
 
 
         break
