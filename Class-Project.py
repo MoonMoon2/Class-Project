@@ -430,20 +430,20 @@ while loop == True:
                 print('*********************************************************')
                 time.sleep(0.5)
             if B == True:
-                print('Option B: China recieved money and goods from other countries')
+                print('Option B: China had many desireable goods that were wanted by other countries.')
                 print('*********************************************************')
                 time.sleep(0.5)
             if C == True:
-                print('Option C: ')
+                print('Option C: The voyages were state funded.')
                 print('*********************************************************')
                 time.sleep(0.5)
             if D == True:
-                print('Option D: ')
+                print('Option D: All of the above')
                 print('*********************************************************')
                 time.sleep(0.5)
             ans = raw_input('')
             ans = ans.lower()
-            rans = str('c')
+            rans = str('d')
             if ans == rans:
                 print('Good Job, ' + name + '. You got it right. Do you understand why?')
                 q1 = False
@@ -469,10 +469,10 @@ while loop == True:
                 print('Correction text')
                 B = False
                 continue
-            elif ans == 'd':
-                print('Answer D is incorrect, ' + name + '.')
+            elif ans == 'c':
+                print('Answer C is incorrect, ' + name + '.')
                 print('correction text')
-                D = False
+                C = False
                 continue
             else:
                 print('\'' + ans + '\' is not an option.')
