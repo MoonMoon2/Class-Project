@@ -222,7 +222,7 @@ while loop == True:
                 print('*********************************************************')
                 time.sleep(0.5)
             if B == True:
-                print('Option B: ')
+                print('Option B: Only humanism is reflected in the Gutenberg Bible')
                 print('*********************************************************')
                 time.sleep(0.5)
             if C == True:
@@ -477,6 +477,11 @@ while loop == True:
             else:
                 print('\'' + ans + '\' is not an option.')
                 continue
+
+        time.sleep(2)
+        print('You have reached the end of the quiz')
+        print('Good Job!')
+        
 
 
         break
