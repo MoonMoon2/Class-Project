@@ -56,7 +56,10 @@ MULTIPLE CHOICE QUESTION
                     print('checkpoint')
                     q1 = False
                     break
-
+                if why == 'yes':
+                    print('Next Question')
+                    time.sleep(2)
+                    break
 
 
 

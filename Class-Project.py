@@ -248,6 +248,10 @@ while loop == True:
                     time.sleep(0.5)
                     print('checkpoint')
                     break
+                if why == 'yes':
+                    print('Next Question')
+                    time.sleep(2)
+                    break
             elif ans == 'a':
                 print('Answer A is incorrect, ' + name + '.')
                 print('Correction text')
