@@ -313,7 +313,60 @@ while loop == True:
             else:
                 print(ans + ' is not A or B')
                 continue
-
+        A = True
+        B = True
+        C = True
+        D = True
+        while q5 == True:
+            print('*********************************************************')
+            print('                         Part: 2                         ')
+            print('*********************************************************')
+            print('                  Empires Outside Europe                 ')
+            print('*********************************************************')
+            print('                     Gutenberg Bible                     ')
+            print('*********************************************************')
+            time.sleep(2)
+            print('')
+            print('')
+            print('*********************************************************')
+            print('                      Question: 5                        ')
+            print('*********************************************************')
+            print('Zheng He commanded fleets of hundreds of treasure ships during the seven voyages and had a crew of 2,800 men.        ')
+            print('*********************************************************')
+            print('                     Choose A or B                       ')
+            print('*********************************************************')
+        if A == True:
+            print('Option A: True')
+            print('*********************************************************')
+        if B == True:
+            print('Option B: False')
+            print('*********************************************************')
+        ans = raw_input()
+        ans = ans.lower()
+        rans = str('a')
+        if ans == rans:
+            print('Good Job, ' + name + '. You got it right. Do you understand why?')
+            q5 = False
+            print('Answer yes or no')
+            why = raw_input('')
+            why = why.lower()
+            if why == 'no':
+                print('The fleets actually had 28,000 men.')
+                time.sleep(5)
+                break
+            if why == 'yes':
+                print('Next Question')
+                time.sleep(2)
+                q5 = False
+                break
+            elif ans == 'b':
+                print('Answer B is incorrect, ' + name + '.')
+                print('Correction text')
+                B = False
+                continue
+            else:
+                print(ans + ' is not A or B')
+                continue
 
 
 
