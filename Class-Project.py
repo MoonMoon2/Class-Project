@@ -269,6 +269,7 @@ while loop == True:
                 continue
             else:
                 print('\'' + ans + '\' is not an option.')
+                continue
         A = True
         B = True
         C = True
@@ -279,7 +280,7 @@ while loop == True:
             print('*********************************************************')
             print(' Gutenberg was a German who invented the printing press. ')
             print('*********************************************************')
-            print('                     Choose A or B                       ')
+            print('                     Choose \'A\' or \'B\'                       ')
             print('*********************************************************')
             if A == True:
                 print('Option A: True')
@@ -358,7 +359,7 @@ while loop == True:
                 print('Next Question')
                 time.sleep(2)
                 q5 = False
-                break
+                continue
             elif ans == 'b':
                 print('Answer B is incorrect, ' + name + '.')
                 print('Correction text')
@@ -367,8 +368,115 @@ while loop == True:
             else:
                 print(ans + ' is not A or B')
                 continue
-
-
+        A = True
+        B = True
+        C = True
+        D = True
+        while q6 == True:
+            print('*********************************************************')
+            print('                      Question: 6                        ')
+            print('*********************************************************')
+            print('Zheng He’s boats were said to be up to 450 ft long and 180 ft wide.')
+            print('*********************************************************')
+            print('                     Choose A or B                       ')
+            print('*********************************************************')
+        if A == True:
+            print('Option A: True')
+            print('*********************************************************')
+        if B == True:
+            print('Option B: False')
+            print('*********************************************************')
+        ans = raw_input()
+        ans = ans.lower()
+        rans = str('a')
+        if ans == rans:
+            print('Good Job, ' + name + '. You got it right. Do you understand why?')
+            q5 = False
+            print('Answer yes or no')
+            why = raw_input('')
+            why = why.lower()
+            if why == 'no':
+                print('The largest ships were gigantic \'Treasure Ships\' and made Columbus\' ship look tiny.')
+                time.sleep(5)
+                break
+            if why == 'yes':
+                print('Next Question')
+                time.sleep(2)
+                q6 = False
+                continue
+            elif ans == 'b':
+                print('Answer B is incorrect, ' + name + '.')
+                print('The largest ships were gigantic \'Treasure Ships\' and made Columbus\' ship look tiny.')
+                B = False
+                continue
+            else:
+                print(ans + ' is not A or B')
+                continue
+        A = True
+        B = True
+        C = True
+        D = True
+        while q7 == True:
+            print('*********************************************************')
+            print('                      Question: 7                        ')
+            print('*********************************************************')
+            print('Based on the creation of these fleets and gigantic ships we can tell...')
+            print('*********************************************************')
+            print('               Type \'A\', \'B\', \'C\', or \'D\'                ')
+            print('*********************************************************')
+            time.sleep(2)
+            if A == True:
+                print('Option A: China did a lot of trading during this time period, with a lot of cargo.')
+                print('*********************************************************')
+                time.sleep(0.5)
+            if B == True:
+                print('Option B: China recieved money and goods from other countries')
+                print('*********************************************************')
+                time.sleep(0.5)
+            if C == True:
+                print('Option C: ')
+                print('*********************************************************')
+                time.sleep(0.5)
+            if D == True:
+                print('Option D: ')
+                print('*********************************************************')
+                time.sleep(0.5)
+            ans = raw_input('')
+            ans = ans.lower()
+            rans = str('c')
+            if ans == rans:
+                print('Good Job, ' + name + '. You got it right. Do you understand why?')
+                q1 = False
+                print('Answer yes or no')
+                why = raw_input('')
+                why = why.lower()
+                if why == 'no':
+                    print('Explanation')
+                    time.sleep(0.5)
+                    print('checkpoint')
+                    break
+                if why == 'yes':
+                    print('Next Question')
+                    time.sleep(2)
+                    break
+            elif ans == 'a':
+                print('Answer A is incorrect, ' + name + '.')
+                print('Correction text')
+                A = False
+                continue
+            elif ans == 'b':
+                print('Answer B is incorrect, ' + name + '.')
+                print('Correction text')
+                B = False
+                continue
+            elif ans == 'd':
+                print('Answer D is incorrect, ' + name + '.')
+                print('correction text')
+                D = False
+                continue
+            else:
+                print('\'' + ans + '\' is not an option.')
+                continue
 
 
         break
