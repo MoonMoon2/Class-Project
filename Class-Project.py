@@ -210,7 +210,7 @@ while loop == True:
         D = True
         while q1 == True:
             print('*********************************************************')
-            print('                      Question: 1                        ')
+            print('                      Question: 3                        ')
             print('*********************************************************')
             print('How are Secularism and Humanism reflected in the Gutenberg Bible?         ')
             print('*********************************************************')
@@ -223,7 +223,7 @@ while loop == True:
                 print('*********************************************************')
                 time.sleep(0.5)
             if B == True:
-                print('Option B: Cheese')
+                print('Option B: ')
                 print('*********************************************************')
                 time.sleep(0.5)
             if C == True:
@@ -232,7 +232,7 @@ while loop == True:
                 print('*********************************************************')
                 time.sleep(0.5)
             if D == True:
-                print('Option D: ')
+                print('Option D: They are not.')
                 print('*********************************************************')
                 time.sleep(0.5)
             ans = raw_input('')
@@ -250,10 +250,6 @@ while loop == True:
                     print('checkpoint')
                     q1 = False
                     break
-
-
-
-
             elif ans == 'a':
                 print('Answer A is incorrect, ' + name + '.')
                 print('Correction text')
@@ -271,6 +267,54 @@ while loop == True:
                 continue
             else:
                 print('\'' + ans + '\' is not an option.')
+        A = True
+        B = True
+        C = True
+        D = True
+        while q2 == True:
+            print('*********************************************************')
+            print('                      Question: 4                        ')
+            print('*********************************************************')
+            print(' Gutenberg was a German who invented the printing press. ')
+            print('*********************************************************')
+            print('                     Choose A or B                       ')
+            print('*********************************************************')
+            if A == True:
+                print('Option A: True')
+                print('*********************************************************')
+            if B == True:
+                print('Option B: False')
+                print('*********************************************************')
+            ans = raw_input()
+            ans = ans.lower()
+            rans = str('a')
+            if ans == rans:
+                print('Good Job, ' + name + '. You got it right. Do you understand why?')
+                q1 = False
+                print('Answer yes or no')
+                why = raw_input('')
+                why = why.lower()
+                if why == 'no':
+                    print('Gutenberg invented the printing press in the year 1439, and was a German man.')
+                    time.sleep(5)
+                    break
+                if why == 'yes':
+                    print('Next Question')
+                    time.sleep(2)
+                    q2 = False
+                    break
+            elif ans == 'b':
+                print('Answer B is incorrect, ' + name + '.')
+                print('Gutenberg invented the printing press in the year 1439, and was a German man.')
+                time.sleep(5)
+                B = False
+                continue
+            else:
+                print(ans + ' is not A or B')
+                continue
+
+
+
 
 
         break
