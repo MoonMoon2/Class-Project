@@ -376,7 +376,7 @@ while loop == True:
             print('*********************************************************')
             print('                      Question: 6                        ')
             print('*********************************************************')
-            print('Zheng He’s boats were said to be up to 450 ft long and 180 ft wide.')
+            print('Zheng He\'s boats were said to be up to 450 ft long and 180 ft wide.')
             print('*********************************************************')
             print('                     Choose A or B                       ')
             print('*********************************************************')
@@ -481,7 +481,7 @@ while loop == True:
         time.sleep(2)
         print('You have reached the end of the quiz')
         print('Good Job!')
-        
+
 
 
         break
