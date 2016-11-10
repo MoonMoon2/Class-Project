@@ -4,6 +4,7 @@ import os
 import itertools
 import time
 import random
+import Image
 
 # 'Contains' function, Created by Adrian Hall. https://github.com/aderhall
 def contains(origin, text):
@@ -64,6 +65,9 @@ Alpha = False
 Beta = False
 Charlie = False
 Delta = False
+# Need a certain package for this to run, so will keep commented till then.
+#Gutenberg = Image.open('/Users/wardt/Documents/Class-Project/Bible.jpg');
+#Fleet = Image.open('/Users/wardt/Documents/Class-Project/Fleet.jpg')
 
 while loop == True:
     if len(ans) <= 1:
@@ -90,6 +94,10 @@ while loop == True:
             print('*********************************************************')
             print('                     Gutenberg Bible                     ')
             print('*********************************************************')
+            print('')
+            print('')
+            time.sleep(2)
+            #Gutenberg.show();
             time.sleep(2)
             print('')
             print('')
@@ -215,7 +223,13 @@ while loop == True:
             print('*********************************************************')
             print('               Type \'A\', \'B\', \'C\', or \'D\'                ')
             print('*********************************************************')
+            print('')
+            print('')
             time.sleep(2)
+            #Gutenberg.show();
+            time.sleep(2)
+            print('')
+            print('')
             if A == True:
                 print('Option A: The Gutenberg bible took power away from the Peasants by making the Church\'s power more widespread')
                 print('than before. They had bibles everywhere now, and their religion was spreading.')
@@ -324,8 +338,12 @@ while loop == True:
             print('*********************************************************')
             print('                  Empires Outside Europe                 ')
             print('*********************************************************')
-            print('                     Gutenberg Bible                     ')
+            print('                    Zheng He\'s FLeet                    ')
             print('*********************************************************')
+            print('')
+            print('')
+            time.sleep(2)
+            #Fleet.show();
             time.sleep(2)
             print('')
             print('')
