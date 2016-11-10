@@ -65,9 +65,9 @@ Alpha = False
 Beta = False
 Charlie = False
 Delta = False
-# Need a certain package for this to run, so will keep commented till then.
-#Gutenberg = Image.open('/Users/wardt/Documents/Class-Project/Bible.jpg');
-#Fleet = Image.open('/Users/wardt/Documents/Class-Project/Fleet.jpg')
+
+Gutenberg = Image.open('/Users/TWard/Class-Project/Bible.jpg');
+Fleet = Image.open('/Users/TWard/Class-Project/Fleet.jpg');
 
 while loop == True:
     if len(ans) <= 1:
@@ -97,7 +97,7 @@ while loop == True:
             print('')
             print('')
             time.sleep(2)
-            #Gutenberg.show();
+            Gutenberg.show();
             time.sleep(2)
             print('')
             print('')
@@ -226,7 +226,7 @@ while loop == True:
             print('')
             print('')
             time.sleep(2)
-            #Gutenberg.show();
+            Gutenberg.show();
             time.sleep(2)
             print('')
             print('')
@@ -343,7 +343,7 @@ while loop == True:
             print('')
             print('')
             time.sleep(2)
-            #Fleet.show();
+            Fleet.show();
             time.sleep(2)
             print('')
             print('')
