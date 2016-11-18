@@ -4,7 +4,9 @@ import os
 import itertools
 import time
 import random
-import Image
+from Tkinter import*
+import urllib
+import base64
 
 # 'Contains' function, Created by Adrian Hall. https://github.com/aderhall
 def contains(origin, text):
@@ -66,9 +68,6 @@ Beta = False
 Charlie = False
 Delta = False
 
-Gutenberg = Image.open('/Users/TWard/Class-Project/Bible.jpg');
-Fleet = Image.open('/Users/TWard/Class-Project/Fleet.jpg');
-
 while loop == True:
     if len(ans) <= 1:
     	print('Hello ' + name + '. Please verify that this if your name.')
@@ -96,8 +95,17 @@ while loop == True:
             print('*********************************************************')
             print('')
             print('')
-            time.sleep(2)
-            Gutenberg.show();
+            time.sleep(0.5)
+            root = Tk()
+            URL = "http://3.bp.blogspot.com/-Y-VdIkzl1V8/UAAyo1PsJFI/AAAAAAAABQo/HEcCJ2uFT_Q/s1600/gbible.gif"
+            a = urllib.urlopen(URL)
+            RI = a.read()
+            a.close()
+            b = base64.encodestring(RI)
+            image = PhotoImage(data=b)
+            label = Label(image=image)
+            label.pack()
+            root.mainloop()
             time.sleep(2)
             print('')
             print('')
@@ -130,7 +138,7 @@ while loop == True:
             ans = ans.lower()
             rans = str('a')
             if ans == rans:
-                print('Good Job, ' + name + '. You got it right. Do you understand why?')
+                print('Good Job, ' + name + '. You got it right. Do you understand why? Answer no for more information on this question. Answer no for more information on this question.')
                 q1 = False
                 print('Answer yes or no')
                 why = raw_input('')
@@ -190,7 +198,7 @@ while loop == True:
             ans = ans.lower()
             rans = str('a')
             if ans == rans:
-                print('Good Job, ' + name + '. You got it right. Do you understand why?')
+                print('Good Job, ' + name + '. You got it right. Do you understand why? Answer no for more information on this question.')
                 q1 = False
                 print('Answer yes or no')
                 why = raw_input('')
@@ -226,7 +234,16 @@ while loop == True:
             print('')
             print('')
             time.sleep(2)
-            Gutenberg.show();
+            root = Tk()
+            URL = "http://3.bp.blogspot.com/-Y-VdIkzl1V8/UAAyo1PsJFI/AAAAAAAABQo/HEcCJ2uFT_Q/s1600/gbible.gif"
+            a = urllib.urlopen(URL)
+            RI = a.read()
+            a.close()
+            b = base64.encodestring(RI)
+            image = PhotoImage(data=b)
+            label = Label(image=image)
+            label.pack()
+            root.mainloop()
             time.sleep(2)
             print('')
             print('')
@@ -252,13 +269,13 @@ while loop == True:
             ans = ans.lower()
             rans = str('c')
             if ans == rans:
-                print('Good Job, ' + name + '. You got it right. Do you understand why?')
+                print('Good Job, ' + name + '. You got it right. Do you understand why? Answer no for more information on this question.')
                 q1 = False
                 print('Answer yes or no')
                 why = raw_input('')
                 why = why.lower()
                 if why == 'no':
-                    print('Explanation')
+                    print('The Gutenberg bible represents Humanism and Secularism because it helped disperse some of their power over the people, which was also one of the goals of Humanism and Secularism.')
                     time.sleep(0.5)
                     print('checkpoint')
                     break
@@ -268,17 +285,17 @@ while loop == True:
                     break
             elif ans == 'a':
                 print('Answer A is incorrect, ' + name + '.')
-                print('Correction text')
+                print('The Gutenberg bible represents Humanism and Secularism because it helped disperse some of their power over the people, which was also one of the goals of Humanism and Secularism.')
                 A = False
                 continue
             elif ans == 'b':
                 print('Answer B is incorrect, ' + name + '.')
-                print('Correction text')
+                print('The Gutenberg bible represents Humanism and Secularism because it helped disperse some of their power over the people, which was also one of the goals of Humanism and Secularism.')
                 B = False
                 continue
             elif ans == 'd':
                 print('Answer D is incorrect, ' + name + '.')
-                print('correction text')
+                print('The Gutenberg bible represents Humanism and Secularism because it helped disperse some of their power over the people, which was also one of the goals of Humanism and Secularism.')
                 D = False
                 continue
             else:
@@ -306,7 +323,7 @@ while loop == True:
             ans = ans.lower()
             rans = str('a')
             if ans == rans:
-                print('Good Job, ' + name + '. You got it right. Do you understand why?')
+                print('Good Job, ' + name + '. You got it right. Do you understand why? Answer no for more information on this question.')
                 q1 = False
                 print('Answer yes or no')
                 why = raw_input('')
@@ -343,7 +360,16 @@ while loop == True:
             print('')
             print('')
             time.sleep(2)
-            Fleet.show();
+            root = Tk()
+            URL = "http://i.imgur.com/NzqDd25.gif"
+            a = urllib.urlopen(URL)
+            RI = a.read()
+            a.close()
+            b = base64.encodestring(RI)
+            image = PhotoImage(data=b)
+            label = Label(image=image)
+            label.pack()
+            root.mainloop()
             time.sleep(2)
             print('')
             print('')
@@ -364,7 +390,7 @@ while loop == True:
         ans = ans.lower()
         rans = str('a')
         if ans == rans:
-            print('Good Job, ' + name + '. You got it right. Do you understand why?')
+            print('Good Job, ' + name + '. You got it right. Do you understand why? Answer no for more information on this question.')
             q5 = False
             print('Answer yes or no')
             why = raw_input('')
@@ -378,14 +404,14 @@ while loop == True:
                 time.sleep(2)
                 q5 = False
                 continue
-            elif ans == 'b':
-                print('Answer B is incorrect, ' + name + '.')
-                print('Correction text')
-                B = False
-                continue
-            else:
-                print(ans + ' is not A or B')
-                continue
+        elif ans == 'b':
+            print('Answer B is incorrect, ' + name + '.')
+            print('The fleets actually had 28,000 men.')
+            B = False
+            continue
+        else:
+            print(ans + ' is not A or B')
+            continue
         A = True
         B = True
         C = True
@@ -398,30 +424,43 @@ while loop == True:
             print('*********************************************************')
             print('                     Choose A or B                       ')
             print('*********************************************************')
-        if A == True:
-            print('Option A: True')
+            time.sleep(2)
+            root = Tk()
+            URL = "http://i.imgur.com/NzqDd25.gif"
+            a = urllib.urlopen(URL)
+            RI = a.read()
+            a.close()
+            b = base64.encodestring(RI)
+            image = PhotoImage(data=b)
+            label = Label(image=image)
+            label.pack()
+            root.mainloop()
+            time.sleep(2)
             print('*********************************************************')
-        if B == True:
-            print('Option B: False')
-            print('*********************************************************')
-        ans = raw_input()
-        ans = ans.lower()
-        rans = str('a')
-        if ans == rans:
-            print('Good Job, ' + name + '. You got it right. Do you understand why?')
-            q5 = False
-            print('Answer yes or no')
-            why = raw_input('')
-            why = why.lower()
-            if why == 'no':
-                print('The largest ships were gigantic \'Treasure Ships\' and made Columbus\' ship look tiny.')
-                time.sleep(5)
-                break
-            if why == 'yes':
-                print('Next Question')
-                time.sleep(2)
-                q6 = False
-                continue
+            if A == True:
+                print('Option A: True')
+                print('*********************************************************')
+            if B == True:
+                print('Option B: False')
+                print('*********************************************************')
+            ans = raw_input()
+            ans = ans.lower()
+            rans = str('a')
+            if ans == rans:
+                print('Good Job, ' + name + '. You got it right. Do you understand why? Answer no for more information on this question.')
+                q5 = False
+                print('Answer yes or no')
+                why = raw_input('')
+                why = why.lower()
+                if why == 'no':
+                    print('The largest ships were gigantic \'Treasure Ships\' and made Columbus\' ship look tiny.')
+                    time.sleep(5)
+                    break
+                if why == 'yes':
+                    print('Next Question')
+                    time.sleep(2)
+                    q6 = False
+                    continue
             elif ans == 'b':
                 print('Answer B is incorrect, ' + name + '.')
                 print('The largest ships were gigantic \'Treasure Ships\' and made Columbus\' ship look tiny.')
@@ -463,13 +502,13 @@ while loop == True:
             ans = ans.lower()
             rans = str('d')
             if ans == rans:
-                print('Good Job, ' + name + '. You got it right. Do you understand why?')
+                print('Good Job, ' + name + '. You got it right. Do you understand why? Answer no for more information on this question.')
                 q1 = False
                 print('Answer yes or no')
                 why = raw_input('')
                 why = why.lower()
                 if why == 'no':
-                    print('Explanation')
+                    print('Because China is not a free market, and the State controls most of the money, it had to be State funded. Nobody else could have afforded it.')
                     time.sleep(0.5)
                     print('checkpoint')
                     break
@@ -479,23 +518,187 @@ while loop == True:
                     break
             elif ans == 'a':
                 print('Answer A is incorrect, ' + name + '.')
-                print('Correction text')
+                print('Because China is not a free market, and the State controls most of the money, it had to be State funded. Nobody else could have afforded it.')
                 A = False
                 continue
             elif ans == 'b':
                 print('Answer B is incorrect, ' + name + '.')
-                print('Correction text')
+                print('CBecause China is not a free market, and the State controls most of the money, it had to be State funded. Nobody else could have afforded it.')
                 B = False
                 continue
             elif ans == 'c':
                 print('Answer C is incorrect, ' + name + '.')
-                print('correction text')
+                print('Because China is not a free market, and the State controls most of the money, it had to be State funded. Nobody else could have afforded it.')
                 C = False
                 continue
             else:
                 print('\'' + ans + '\' is not an option.')
                 continue
-
+        A = True
+        B = True
+        C = True
+        D = True
+        while q8 == True:
+            print('*********************************************************')
+            print('                         Part: 3                         ')
+            print('*********************************************************')
+            print('                     Age of Discovery                    ')
+            print('*********************************************************')
+            print('                   World Changing Foods                  ')
+            print('*********************************************************')
+            print('')
+            print('')
+            print('East Indie Spices')
+            time.sleep(2)
+            root = Tk()
+            URL = "http://i.imgur.com/QM3RwyT.gif"
+            a = urllib.urlopen(URL)
+            RI = a.read()
+            a.close()
+            b = base64.encodestring(RI)
+            image = PhotoImage(data=b)
+            label = Label(image=image)
+            label.pack()
+            root.mainloop()
+            print('')
+            time.sleep(2)
+            print('')
+            print('')
+            print('*********************************************************')
+            print('                      Question: 8                        ')
+            print('*********************************************************')
+            print('Columbus found America because he was looking for ______')
+            print('*********************************************************')
+            print('               Type \'A\', \'B\', \'C\', or \'D\'                ')
+            print('*********************************************************')
+            time.sleep(2)
+            if A == True:
+                print('Option A: India')
+                print('*********************************************************')
+                time.sleep(0.5)
+            if B == True:
+                print('Option B: America')
+                print('*********************************************************')
+                time.sleep(0.5)
+            if C == True:
+                print('Option C: The East indies')
+                print('*********************************************************')
+                time.sleep(0.5)
+            if D == True:
+                print('Option D: The West indies')
+                print('*********************************************************')
+                time.sleep(0.5)
+            ans = raw_input('')
+            ans = ans.lower()
+            rans = str('c')
+            if ans == rans:
+                print('Good Job, ' + name + '. You got it right. Do you understand why? Answer no for more information on this question.')
+                q1 = False
+                print('Answer yes or no')
+                why = raw_input('')
+                why = why.lower()
+                if why == 'no':
+                    print('East Indie Spices caused a major change in the course of history. When Columbus found america he was looking for a cheaper route to get them.')
+                    time.sleep(0.5)
+                    print('checkpoint')
+                    break
+                if why == 'yes':
+                    print('Next Question')
+                    time.sleep(2)
+                    break
+            elif ans == 'a':
+                print('Answer A is incorrect, ' + name + '.')
+                print('East Indie spices are the artifact, and caused some major changes in history, like Columbus discovering America')
+                A = False
+                continue
+            elif ans == 'b':
+                print('Answer B is incorrect, ' + name + '.')
+                print('East Indie spices are the artifact, and caused some major changes in history, like Columbus discovering America')
+                B = False
+                continue
+            elif ans == 'd':
+                print('Answer D is incorrect, ' + name + '.')
+                print('East Indie spices are the artifact, and caused some major changes in history, like Columbus discovering America')
+                C = False
+                continue
+            else:
+                print('\'' + ans + '\' is not an option.')
+                continue
+        A = True
+        B = True
+        C = True
+        D = True
+        while q9 == True:
+            root = Tk()
+            URL = "http://i.imgur.com/QM3RwyT.gif"
+            a = urllib.urlopen(URL)
+            RI = a.read()
+            a.close()
+            b = base64.encodestring(RI)
+            image = PhotoImage(data=b)
+            label = Label(image=image)
+            label.pack()
+            root.mainloop()
+            print('*********************************************************')
+            print('                      Question: 9                        ')
+            print('*********************************************************')
+            print('Which food caused major change in history?')
+            print('*********************************************************')
+            print('               Type \'A\', \'B\', \'C\', or \'D\'                ')
+            print('*********************************************************')
+            time.sleep(2)
+            if A == True:
+                print('Option A: Corn')
+                print('*********************************************************')
+                time.sleep(0.5)
+            if B == True:
+                print('Option B: Bread')
+                print('*********************************************************')
+                time.sleep(0.5)
+            if C == True:
+                print('Option C: Potatos')
+                print('*********************************************************')
+                time.sleep(0.5)
+            if D == True:
+                print('Option D: All of the above')
+                print('*********************************************************')
+                time.sleep(0.5)
+            ans = raw_input('')
+            ans = ans.lower()
+            rans = str('d')
+            if ans == rans:
+                print('Good Job, ' + name + '. You got it right. Do you understand why? Answer no for more information on this question.')
+                q1 = False
+                print('Answer yes or no')
+                why = raw_input('')
+                why = why.lower()
+                if why == 'no':
+                    print('Potatoes made it possible for surplus in the amount of food in Europe, and fueld their wars')
+                    time.sleep(0.5)
+                    print('checkpoint')
+                    break
+                if why == 'yes':
+                    print('Next Question')
+                    time.sleep(2)
+                    break
+            elif ans == 'a':
+                print('Answer A is incorrect, ' + name + '.')
+                print('Potatoes made it possible for surplus in the amount of food in Europe, and fueld their wars')
+                A = False
+                continue
+            elif ans == 'b':
+                print('Answer B is incorrect, ' + name + '.')
+                print('Potatoes made it possible for surplus in the amount of food in Europe, and fueld their wars')
+                B = False
+                continue
+            elif ans == 'c':
+                print('Answer C is incorrect, ' + name + '.')
+                print('Potatoes made it possible for surplus in the amount of food in Europe, and fueld their wars')
+                C = False
+                continue
+            else:
+                print('\'' + ans + '\' is not an option.')
+                continue
         time.sleep(2)
         print('You have reached the end of the quiz')
         print('Good Job!')
