@@ -4,8 +4,9 @@ import os
 import itertools
 import time
 import random
-from Tkinter import*
+from tkinter import*
 import urllib
+from urllib.request import urlopen
 import base64
 
 # 'Contains' function, Created by Adrian Hall. https://github.com/aderhall
@@ -45,7 +46,7 @@ print('This is an interactive game/quiz that will both quiz you, and teach you a
 time.sleep(2)
 print('We will ask for your name and run some things with it to ensure the program you are running this in is configured correctly.')
 print('What is your name?')
-name = raw_input()
+name = input()
 time.sleep(0.5)
 loop = True
 ans = 'T'
@@ -72,14 +73,14 @@ while loop == True:
     if len(ans) <= 1:
     	print('Hello ' + name + '. Please verify that this if your name.')
     	print('Answer yes or no.')
-    	ans = raw_input('')
+    	ans = input('')
     	ans = ans.lower()
     else:
     	print('Your real name is ' + name + ', right?')
     	print('Answer yes or no.')
-    	ans = raw_input('')
+    	ans = input('')
     	ans = ans.lower()
-    if ans == 'yes':
+    if ans == 'yes'|| ans == 'y':
         loop == False
         A = True
         B = True
@@ -98,7 +99,7 @@ while loop == True:
             time.sleep(0.5)
             root = Tk()
             URL = "http://3.bp.blogspot.com/-Y-VdIkzl1V8/UAAyo1PsJFI/AAAAAAAABQo/HEcCJ2uFT_Q/s1600/gbible.gif"
-            a = urllib.urlopen(URL)
+            a = urllib.request.urlopen(URL)
             RI = a.read()
             a.close()
             b = base64.encodestring(RI)
@@ -134,14 +135,14 @@ while loop == True:
                 print('Option D: A group of people who isolated themselves from the rest of society to study science.')
                 print('*********************************************************')
                 time.sleep(0.5)
-            ans = raw_input('')
+            ans = input('')
             ans = ans.lower()
             rans = str('a')
             if ans == rans:
                 print('Good Job, ' + name + '. You got it right. Do you understand why? Answer no for more information on this question. Answer no for more information on this question.')
                 q1 = False
                 print('Answer yes or no')
-                why = raw_input('')
+                why = input('')
                 why = why.lower()
                 if why == 'no':
                     print('Secularism is a belief that religion should be separate of goverment, and other public life.')
@@ -194,14 +195,14 @@ while loop == True:
             if B == True:
                 print('Option B: False')
                 print('*********************************************************')
-            ans = raw_input()
+            ans = input()
             ans = ans.lower()
             rans = str('a')
             if ans == rans:
                 print('Good Job, ' + name + '. You got it right. Do you understand why? Answer no for more information on this question.')
                 q1 = False
                 print('Answer yes or no')
-                why = raw_input('')
+                why = input('')
                 why = why.lower()
                 if why == 'no':
                     print('Humanism was an appreciation of Humans and in the power of the human mind.')
@@ -236,7 +237,7 @@ while loop == True:
             time.sleep(2)
             root = Tk()
             URL = "http://3.bp.blogspot.com/-Y-VdIkzl1V8/UAAyo1PsJFI/AAAAAAAABQo/HEcCJ2uFT_Q/s1600/gbible.gif"
-            a = urllib.urlopen(URL)
+            a = urllib.request.urlopen(URL)
             RI = a.read()
             a.close()
             b = base64.encodestring(RI)
@@ -265,14 +266,14 @@ while loop == True:
                 print('Option D: They are not.')
                 print('*********************************************************')
                 time.sleep(0.5)
-            ans = raw_input('')
+            ans = input('')
             ans = ans.lower()
             rans = str('c')
             if ans == rans:
                 print('Good Job, ' + name + '. You got it right. Do you understand why? Answer no for more information on this question.')
                 q1 = False
                 print('Answer yes or no')
-                why = raw_input('')
+                why = input('')
                 why = why.lower()
                 if why == 'no':
                     print('The Gutenberg bible represents Humanism and Secularism because it helped disperse some of their power over the people, which was also one of the goals of Humanism and Secularism.')
@@ -319,14 +320,14 @@ while loop == True:
             if B == True:
                 print('Option B: False')
                 print('*********************************************************')
-            ans = raw_input()
+            ans = input()
             ans = ans.lower()
             rans = str('a')
             if ans == rans:
                 print('Good Job, ' + name + '. You got it right. Do you understand why? Answer no for more information on this question.')
                 q1 = False
                 print('Answer yes or no')
-                why = raw_input('')
+                why = input('')
                 why = why.lower()
                 if why == 'no':
                     print('Gutenberg invented the printing press in the year 1439, and was a German man.')
@@ -345,31 +346,32 @@ while loop == True:
             else:
                 print(ans + ' is not A or B')
                 continue
+
+        print('*********************************************************')
+        print('                         Part: 2                         ')
+        print('*********************************************************')
+        print('                  Empires Outside Europe                 ')
+        print('*********************************************************')
+        print('                    Zheng He\'s FLeet                    ')
+        print('*********************************************************')
+        print('')
+        print('')
+        time.sleep(2)
+        root = Tk()
+        URL = "http://i.imgur.com/NzqDd25.gif"
+        a = urllib.request.urlopen(URL)
+        RI = a.read()
+        a.close()
+        b = base64.encodestring(RI)
+        image = PhotoImage(data=b)
+        label = Label(image=image)
+        label.pack()
+        root.mainloop()
         A = True
         B = True
         C = True
         D = True
         while q5 == True:
-            print('*********************************************************')
-            print('                         Part: 2                         ')
-            print('*********************************************************')
-            print('                  Empires Outside Europe                 ')
-            print('*********************************************************')
-            print('                    Zheng He\'s FLeet                    ')
-            print('*********************************************************')
-            print('')
-            print('')
-            time.sleep(2)
-            root = Tk()
-            URL = "http://i.imgur.com/NzqDd25.gif"
-            a = urllib.urlopen(URL)
-            RI = a.read()
-            a.close()
-            b = base64.encodestring(RI)
-            image = PhotoImage(data=b)
-            label = Label(image=image)
-            label.pack()
-            root.mainloop()
             time.sleep(2)
             print('')
             print('')
@@ -380,21 +382,21 @@ while loop == True:
             print('*********************************************************')
             print('                     Choose A or B                       ')
             print('*********************************************************')
-        if A == True:
-            print('Option A: True')
-            print('*********************************************************')
-        if B == True:
-            print('Option B: False')
-            print('*********************************************************')
-        ans = raw_input()
-        ans = ans.lower()
-        rans = str('a')
-        if ans == rans:
-            print('Good Job, ' + name + '. You got it right. Do you understand why? Answer no for more information on this question.')
-            q5 = False
-            print('Answer yes or no')
-            why = raw_input('')
-            why = why.lower()
+            if A == True:
+                print('Option A: True')
+                print('*********************************************************')
+            if B == True:
+                print('Option B: False')
+                print('*********************************************************')
+            ans = input()
+            ans = ans.lower()
+            rans = str('a')
+            if ans == rans:
+                print('Good Job, ' + name + '. You got it right. Do you understand why? Answer no for more information on this question.')
+                q5 = False
+                print('Answer yes or no')
+                why = input('')
+                why = why.lower()
             if why == 'no':
                 print('The fleets actually had 28,000 men.')
                 time.sleep(5)
@@ -404,11 +406,11 @@ while loop == True:
                 time.sleep(2)
                 q5 = False
                 continue
-        elif ans == 'b':
-            print('Answer B is incorrect, ' + name + '.')
-            print('The fleets actually had 28,000 men.')
-            B = False
-            continue
+            elif ans == 'b':
+                print('Answer B is incorrect, ' + name + '.')
+                print('The fleets actually had 28,000 men.')
+                B = False
+                continue
         else:
             print(ans + ' is not A or B')
             continue
@@ -427,7 +429,7 @@ while loop == True:
             time.sleep(2)
             root = Tk()
             URL = "http://i.imgur.com/NzqDd25.gif"
-            a = urllib.urlopen(URL)
+            a = urllib.request.urlopen(URL)
             RI = a.read()
             a.close()
             b = base64.encodestring(RI)
@@ -443,14 +445,14 @@ while loop == True:
             if B == True:
                 print('Option B: False')
                 print('*********************************************************')
-            ans = raw_input()
+            ans = input()
             ans = ans.lower()
             rans = str('a')
             if ans == rans:
                 print('Good Job, ' + name + '. You got it right. Do you understand why? Answer no for more information on this question.')
                 q5 = False
                 print('Answer yes or no')
-                why = raw_input('')
+                why = input('')
                 why = why.lower()
                 if why == 'no':
                     print('The largest ships were gigantic \'Treasure Ships\' and made Columbus\' ship look tiny.')
@@ -467,7 +469,7 @@ while loop == True:
                 B = False
                 continue
             else:
-                print(ans + ' is not A or B')
+                print(ans + ' is not an \'A\' or a \'B\'')
                 continue
         A = True
         B = True
@@ -498,14 +500,14 @@ while loop == True:
                 print('Option D: All of the above')
                 print('*********************************************************')
                 time.sleep(0.5)
-            ans = raw_input('')
+            ans = input('')
             ans = ans.lower()
             rans = str('d')
             if ans == rans:
                 print('Good Job, ' + name + '. You got it right. Do you understand why? Answer no for more information on this question.')
                 q1 = False
                 print('Answer yes or no')
-                why = raw_input('')
+                why = input('')
                 why = why.lower()
                 if why == 'no':
                     print('Because China is not a free market, and the State controls most of the money, it had to be State funded. Nobody else could have afforded it.')
@@ -552,7 +554,7 @@ while loop == True:
             time.sleep(2)
             root = Tk()
             URL = "http://i.imgur.com/QM3RwyT.gif"
-            a = urllib.urlopen(URL)
+            a = urllib.request.urlopen(URL)
             RI = a.read()
             a.close()
             b = base64.encodestring(RI)
@@ -588,14 +590,14 @@ while loop == True:
                 print('Option D: The West indies')
                 print('*********************************************************')
                 time.sleep(0.5)
-            ans = raw_input('')
+            ans = input('')
             ans = ans.lower()
             rans = str('c')
             if ans == rans:
                 print('Good Job, ' + name + '. You got it right. Do you understand why? Answer no for more information on this question.')
                 q1 = False
                 print('Answer yes or no')
-                why = raw_input('')
+                why = input('')
                 why = why.lower()
                 if why == 'no':
                     print('East Indie Spices caused a major change in the course of history. When Columbus found america he was looking for a cheaper route to get them.')
@@ -631,7 +633,7 @@ while loop == True:
         while q9 == True:
             root = Tk()
             URL = "http://i.imgur.com/QM3RwyT.gif"
-            a = urllib.urlopen(URL)
+            a = urllib.request.urlopen(URL)
             RI = a.read()
             a.close()
             b = base64.encodestring(RI)
@@ -663,14 +665,14 @@ while loop == True:
                 print('Option D: All of the above')
                 print('*********************************************************')
                 time.sleep(0.5)
-            ans = raw_input('')
+            ans = input('')
             ans = ans.lower()
             rans = str('d')
             if ans == rans:
                 print('Good Job, ' + name + '. You got it right. Do you understand why? Answer no for more information on this question.')
                 q1 = False
                 print('Answer yes or no')
-                why = raw_input('')
+                why = input('')
                 why = why.lower()
                 if why == 'no':
                     print('Potatoes made it possible for surplus in the amount of food in Europe, and fueld their wars')
@@ -709,7 +711,7 @@ while loop == True:
 
     elif ans == 'no':
         print('What is your name actually?')
-        name = raw_input('')
+        name = input('')
 
         continue
 
