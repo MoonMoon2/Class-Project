@@ -86,17 +86,17 @@ while loop == True:
         B = True
         C = True
         D = True
+        print('*********************************************************')
+        print('                         Part: 1                         ')
+        print('*********************************************************')
+        print('               Renaissance and Reformation               ')
+        print('*********************************************************')
+        print('                     Gutenberg Bible                     ')
+        print('*********************************************************')
+        print('')
+        print('')
+        time.sleep(0.5)
         while q1 == True:
-            print('*********************************************************')
-            print('                         Part: 1                         ')
-            print('*********************************************************')
-            print('               Renaissance and Reformation               ')
-            print('*********************************************************')
-            print('                     Gutenberg Bible                     ')
-            print('*********************************************************')
-            print('')
-            print('')
-            time.sleep(0.5)
             root = Tk()
             URL = "http://3.bp.blogspot.com/-Y-VdIkzl1V8/UAAyo1PsJFI/AAAAAAAABQo/HEcCJ2uFT_Q/s1600/gbible.gif"
             a = urllib.request.urlopen(URL)
@@ -717,5 +717,6 @@ while loop == True:
 
     else:
         print('Please answer with yes or no. ' + ans + ' is not yes or no.')
+        print('Please try again.')
         time.sleep(0.5)
         continue
